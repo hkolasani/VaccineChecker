@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		1B65466E25CB312600B42B18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B65466D25CB312600B42B18 /* Preview Assets.xcassets */; };
 		1B65467925CB312700B42B18 /* VaccineCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65467825CB312700B42B18 /* VaccineCheckerTests.swift */; };
 		1B65468425CB312700B42B18 /* VaccineCheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65468325CB312700B42B18 /* VaccineCheckerUITests.swift */; };
+		1B65469525CB3B8400B42B18 /* VaccineChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65469425CB3B8400B42B18 /* VaccineChecker.swift */; };
+		1B6546A425CB553100B42B18 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6546A325CB553100B42B18 /* HealthKit.framework */; };
+		1B6546B025CB910800B42B18 /* ModelsBuild in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6546AF25CB910800B42B18 /* ModelsBuild */; };
+		1B6546B225CB910800B42B18 /* ModelsR4 in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6546B125CB910800B42B18 /* ModelsR4 */; };
+		1B6546B425CB910800B42B18 /* ModelsDSTU2 in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6546B325CB910800B42B18 /* ModelsDSTU2 */; };
+		1B6546B625CB910800B42B18 /* ModelsSTU3 in Frameworks */ = {isa = PBXBuildFile; productRef = 1B6546B525CB910800B42B18 /* ModelsSTU3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,9 @@
 		1B65467F25CB312700B42B18 /* VaccineCheckerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCheckerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B65468325CB312700B42B18 /* VaccineCheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCheckerUITests.swift; sourceTree = "<group>"; };
 		1B65468525CB312700B42B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B65469425CB3B8400B42B18 /* VaccineChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineChecker.swift; sourceTree = "<group>"; };
+		1B6546A125CB553100B42B18 /* VaccineChecker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VaccineChecker.entitlements; sourceTree = "<group>"; };
+		1B6546A325CB553100B42B18 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6546A425CB553100B42B18 /* HealthKit.framework in Frameworks */,
+				1B6546B625CB910800B42B18 /* ModelsSTU3 in Frameworks */,
+				1B6546B425CB910800B42B18 /* ModelsDSTU2 in Frameworks */,
+				1B6546B225CB910800B42B18 /* ModelsR4 in Frameworks */,
+				1B6546B025CB910800B42B18 /* ModelsBuild in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +93,7 @@
 				1B65467725CB312700B42B18 /* VaccineCheckerTests */,
 				1B65468225CB312700B42B18 /* VaccineCheckerUITests */,
 				1B65466425CB312600B42B18 /* Products */,
+				1B6546A225CB553100B42B18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,8 +110,10 @@
 		1B65466525CB312600B42B18 /* VaccineChecker */ = {
 			isa = PBXGroup;
 			children = (
+				1B6546A125CB553100B42B18 /* VaccineChecker.entitlements */,
 				1B65466625CB312600B42B18 /* VaccineCheckerApp.swift */,
 				1B65466825CB312600B42B18 /* ContentView.swift */,
+				1B65469425CB3B8400B42B18 /* VaccineChecker.swift */,
 				1B65466A25CB312600B42B18 /* Assets.xcassets */,
 				1B65466F25CB312600B42B18 /* Info.plist */,
 				1B65466C25CB312600B42B18 /* Preview Content */,
@@ -130,6 +147,14 @@
 			path = VaccineCheckerUITests;
 			sourceTree = "<group>";
 		};
+		1B6546A225CB553100B42B18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B6546A325CB553100B42B18 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +171,12 @@
 			dependencies = (
 			);
 			name = VaccineChecker;
+			packageProductDependencies = (
+				1B6546AF25CB910800B42B18 /* ModelsBuild */,
+				1B6546B125CB910800B42B18 /* ModelsR4 */,
+				1B6546B325CB910800B42B18 /* ModelsDSTU2 */,
+				1B6546B525CB910800B42B18 /* ModelsSTU3 */,
+			);
 			productName = VaccineChecker;
 			productReference = 1B65466325CB312600B42B18 /* VaccineChecker.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 1B65465A25CB312600B42B18;
+			packageReferences = (
+				1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */,
+			);
 			productRefGroup = 1B65466425CB312600B42B18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +295,7 @@
 			files = (
 				1B65466925CB312600B42B18 /* ContentView.swift in Sources */,
 				1B65466725CB312600B42B18 /* VaccineCheckerApp.swift in Sources */,
+				1B65469525CB3B8400B42B18 /* VaccineChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,9 +452,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VaccineChecker/VaccineChecker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VaccineChecker/Preview Content\"";
-				DEVELOPMENT_TEAM = L3JJW8GK2V;
+				DEVELOPMENT_TEAM = EYZKNK9V7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VaccineChecker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -439,9 +475,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VaccineChecker/VaccineChecker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VaccineChecker/Preview Content\"";
-				DEVELOPMENT_TEAM = L3JJW8GK2V;
+				DEVELOPMENT_TEAM = EYZKNK9V7X;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VaccineChecker/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -580,6 +617,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/FHIRModels.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B6546AF25CB910800B42B18 /* ModelsBuild */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsBuild;
+		};
+		1B6546B125CB910800B42B18 /* ModelsR4 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsR4;
+		};
+		1B6546B325CB910800B42B18 /* ModelsDSTU2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsDSTU2;
+		};
+		1B6546B525CB910800B42B18 /* ModelsSTU3 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B6546AE25CB910800B42B18 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsSTU3;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B65465B25CB312600B42B18 /* Project object */;
 }
